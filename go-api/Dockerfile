@@ -1,8 +1,9 @@
 # Build stage 
-FROM golang:1.20 as builder
+FROM golang:1.20 AS builder
 WORKDIR /app
 COPY . . 
 RUN go mod download 
+RUN go mod tidy  # Ensure go.mod is tidy and includes all dependencies
 RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
 # Run stage 

@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://go-api-service:8080')  // Kubernetes service name! go-api-service
+    fetch('http://192.168.67.2:30002')  // Kubernetes service name! go-api-service
       .then(res => res.text())
       .then(data => setMessage(data));
   }, []);

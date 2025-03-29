@@ -244,3 +244,6 @@ kubectl logs <pod-name>    # Debug issues
 - Add a database (e.g., PostgreSQL with Persistent Volume).
 - Use `kubectl port-forward` for debugging.
 - Try Helm for package management.
+
+
+## url - http://192.168.67.2:30000/
